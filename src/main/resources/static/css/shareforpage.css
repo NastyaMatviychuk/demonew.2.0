@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700&subset=cyrillic");
+
+:root {
+  --brand-grey: rgb(148, 159, 171);
+  --dark-grey: #8080807e;
+  --main-font: "Rubik", sans-serif;
+  --second-font: "Old Standard TT", sans-serif;
+  --shadow: 4px 5px 11px 0px #80808069;
+}
+
+body {
+  font-family: var(--main-font);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+}
+
+/* ------------Basic template-------- */
+
+button {
+  font-family: var(--main-font);
+  padding: 10px 15px;
+  background-color: transparent;
+  color: var(--brand-grey);
+  border: 3px solid var(--brand-grey);
+  border-radius: 15px;
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.inversed {
+  color: white;
+  border: 3px solid var(--brand-grey);
+  background-color: var(--brand-grey) !important;
+}
+
+h1 h2 h3 h4 h5 {
+  font-family: "Old Standard TT", serif;
+}
+
+h1 {
+  font-family: "Old Standard TT", serif;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.book-name {
+  font-family: var(--main-font);
+}
+
+/* ------------Basic template-------- */
+
+/*----------- Controls elements-------------*/
+.button-group {
+  margin: 40px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.button-group button {
+  width: 45%;
+}
+
+input {
+  background: none;
+  font-family: var(--main-font);
+  border: solid 2px var(--dark-grey);
+  color: black;
+  padding: 15px 40px;
+  font-size: 16px;
+  display: inline-block;
+  width: 100%;
+  border: none;
+  border-bottom: solid 2px var(--brand-grey);
+  -webkit-transition: 200ms linear;
+  -moz-transition: 200ms linear;
+  transition: 200ms linear;
+}
+input:focus,
+input:active,
+input:valid {
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  color: white;
+  background: var(--dark-grey);
+}
+input[type="submit"]:active {
+  color: white;
+  background: var(--dark-grey);
+  -webkit-animation: pulse 200ms ease-out;
+  -moz-animation: pulse 200ms ease-out;
+  animation: pulse 200ms ease-out;
+}
+
+.input-group {
+  display: block;
+  margin: 20px 0;
+  position: relative;
+  margin: 20px 0 5px 0px;
+}
+.input-group input {
+  position: relative;
+  padding: 5px 0px;
+  margin: 5px 0;
+}
+.input-group input:focus + .border,
+.input-group input:valid + .border {
+  width: 100%;
+}
+.input-group input:focus + .border + label,
+.input-group input:valid + .border + label {
+  top: -6px;
+  font-size: 12px;
+  color: black;
+}
+.input-group label {
+  position: absolute;
+  top: 40%;
+  left: 0px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  -webkit-transition: 200ms linear;
+  -moz-transition: 200ms linear;
+  transition: 200ms linear;
+}
+.input-group span {
+  width: 100%;
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  -webkit-transition: 200ms linear;
+  -moz-transition: 200ms linear;
+  transition: 200ms linear;
+}
+
+.input-group .border {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: black;
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.input-group .error {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  color: #f22613;
+}
+.input-group .error + input + .border {
+  background: #f22613;
+}
+
+.input-group .compliment {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  color: #26a65b;
+}
+.input-group .compliment + input + .border {
+  background: #26a65b;
+}
+
+.location-data {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 10px;
+}
+
+@-webkit-keyframes pulse {
+  100% {
+    outline-offset: 10px;
+    outline-color: transparent;
+  }
+}
+@-moz-keyframes pulse {
+  100% {
+    outline-offset: 10px;
+    outline-color: transparent;
+  }
+}
+@keyframes pulse {
+  100% {
+    outline-offset: 10px;
+    outline-color: transparent;
+  }
+}
+/*----------- Form elements-------------*/
+
+/* ------------Layout system---------- */
+
+nav {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+}
+
+nav .wr {
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.menu {
+  display: flex;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: url("logoforlb.png") no-repeat top left;
+  background-size: cover;
+  clear: both;
+  border-radius: 100%;
+  filter: grayscale(1);
+}
+
+.menu-link {
+  font-size: 15px;
+  margin: 10px;
+  display: flex;
+  color: grey;
+  text-decoration: none;
+}
+.menu-link:hover {
+  color: black;
+}
+
+section {
+  margin: 50px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wr {
+  display: flex;
+  max-width: 1024px;
+  width: 100%;
+  margin: auto;
+}
+
+#main .wr {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  padding: 10px;
+  background-color: #8080807e;
+}
+
+footer .wr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ------------Layout system---------- */
+
+/*-------------Decorations-------------*/
+.social-icons {
+  display: flex;
+}
+
+.social-icons li a {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.copyright-text {
+  color: white;
+}
+
+.form-container {
+  max-width: 300px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 4px 5px 11px 0px #80808069;
+  padding: 20px;
+}
+/*-------------Decorations-------------*/
+
+/* -------------Atomics--------------- */
+.w-100 {
+  width: 100%;
+}
+
+.m-1 {
+  margin: 1rem;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.css"
+    />
+      <link rel="stylesheet" type="text/css" th:href="@{/css/shareforpage.css}">
+      <link rel="stylesheet" type="text/css" th:href="@{/css/styleforeventandnews.css}"/>
+    <link rel="shortcut icon" th:href="@{/css/logoforlb.png}" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Events</title>
+  </head>
+  <body>
+    <nav>
+      <div class="wr" >
+        <div class="logo"></div>
+        <ul class="menu">
+          <li>
+              <a class="menu-link" th:href="@{http://localhost:8080/}">
+              Books
+            </a>
+          </li>
+          <li>
+              <a class="menu-link" th:href="@{http://localhost:8080/news}">
+              News
+            </a>
+          </li>
+          <li>
+              <a class="menu-link" th:href="@{http://localhost:8080/event}">
+              Events
+            </a>
+          </li>
+            <li>
+                <a class="menu-link" href="#we">
+                    Log in
+                </a>
+            </li>
+            <li>
+                <a class="menu-link" th:href="@{http://localhost:8080/register}">
+                    Register
+                </a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="hero-cover">
+        <div class="wr">
+          <h1>Events</h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="main" >
+      <div class="wr" >
+        <h1>Events</h1>
+                <div class="grid">
+          <tr th:each ="meeting : ${meeting1}">
+              <a class="book-page" th:href="@{http://localhost:8080/meeting1}">
+            <div class="book-card">
+              <img th:src="${meeting.getImage()}" class="book-img" />
+              <div class="description">
+                <h3 class="book-card-bookname">
+                  <td th:utext="${meeting.getName()}">...</td>
+                </h3>
+                <p class="book-card-author">
+                <td th:utext="${meeting.getDate()}">...</td>
+                </p>
+                <p class="book-card-year"><td th:utext="${meeting.getTime()}">...</td></p>
+              </div>
+            </div></a>
+          </tr>
+
+</div>
+          <div class="wr" >
+                  <tr th:each ="meeting : ${meeting2}">
+                      <a class="book-page" th:href="@{http://localhost:8080/meeting2}">
+                      <div class="book-card">
+                          <img th:src="${meeting.getImage()}" class="book-img" />
+                          <div class="description">
+                              <h3 class="book-card-bookname">
+                                  <td th:utext="${meeting.getName()}">...</td>
+                              </h3>
+                              <p class="book-card-author">
+                              <td th:utext="${meeting.getDate()}">...</td>
+                              </p>
+                              <p class="book-card-year"><td th:utext="${meeting.getTime()}">...</td></p>
+                          </div>
+                      </div>
+                      </a>
+                  </tr>
+              </div>
+              <div class="wr" >
+                      <tr th:each ="meeting : ${meeting3}">
+                          <a class="book-page" th:href="@{http://localhost:8080/meeting3}">
+                          <div class="book-card">
+                              <img th:src="${meeting.getImage()}" class="book-img" />
+                              <div class="description">
+                                  <h3 class="book-card-bookname">
+                                      <td th:utext="${meeting.getName()}">...</td>
+                                  </h3>
+                                  <p class="book-card-author">
+                                  <td th:utext="${meeting.getDate()}">...</td>
+                                  </p>
+                                  <p class="book-card-year"><td th:utext="${meeting.getTime()}">...</td></p>
+                              </div>
+                          </div>
+                          </a>
+                      </tr>
+                  <div class="wr" >
+                      <tr th:each ="meeting : ${meeting4}">
+                          <a class="book-page" th:href="@{http://localhost:8080/meeting4}">
+                          <div class="book-card">
+                              <img th:src="${meeting.getImage()}" class="book-img" />
+                              <div class="description">
+                                  <h3 class="book-card-bookname">
+                                      <td th:utext="${meeting.getName()}">...</td>
+                                  </h3>
+                                  <p class="book-card-author">
+                                  <td th:utext="${meeting.getDate()}">...</td>
+                                  </p>
+                                  <p class="book-card-year"><td th:utext="${meeting.getTime()}">...</td></p>
+                              </div>
+                          </div></a>
+                      </tr>
+                      <div class="wr" >
+                          <tr th:each ="meeting : ${meeting5}">
+                              <a class="book-page" th:href="@{http://localhost:8080/meeting5}">
+                                  <div class="book-card">
+                                      <img th:src="${meeting.getImage()}" class="book-img" />
+                                      <div class="description">
+                                          <h3 class="book-card-bookname">
+                                              <td th:utext="${meeting.getName()}">...</td>
+                                          </h3>
+                                          <p class="book-card-author">
+                                          <td th:utext="${meeting.getDate()}">...</td>
+                                          </p>
+                                          <p class="book-card-year"><td th:utext="${meeting.getTime()}">...</td></p>
+                                      </div>
+                                  </div>
+                              </a>
+                          </tr>
+                  </div>
+              </div>
+              </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="wr">
+          <div class="social-icons-container">
+              <ul class="social-icons">
+                  <li>
+                      <a class="facebook" th:href="@{https://www.facebook.com/people/Оля-Олейнік/100017175578403}"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                      <a class="twitter" th:href="@{https://twitter.com/natya_mat}"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                      <a class="github" th:href="@{https://github.com/NastyaMatviychuk}"><i class="fa fa-github"></i></a>
+                  </li>
+                  <li>
+                      <a class="linkedin" th:href="@{https://tc.lviv.ua/відділення-комп-ютерних-технологій.html}"><i class="fa fa-linkedin"></i></a>
+                  </li>
+              </ul>
+          </div>
+
+        <div>
+          <p class="copyright-text">
+            Copyright &copy; 2019 All Rights Reserved by
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

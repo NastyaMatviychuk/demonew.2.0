@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.css"
+    />
+    <link rel="stylesheet" th:href="@{/css/shareforpage.css}" />
+    <link rel="stylesheet" th:href="@{/css/styleforbookpage.css}" />
+    <link rel="shortcut icon" th:href="@{css/logoforlb.png}" type="image/png" />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Book</title>
+</head>
+<body>
+<nav>
+    <div class="wr">
+        <div class="logo">
+        </div>
+        <ul class="menu">
+            <li>
+                <a class="menu-link" th:href="@{http://localhost:8080/}">
+                    Books
+                </a>
+            </li>
+            <li>
+                <a class="menu-link" th:href="@{http://localhost:8080/news}">
+                    News
+                </a>
+            </li>
+            <li>
+                <a class="menu-link" th:href="@{http://localhost:8080/event}">
+                    Events
+                </a>
+            </li>
+            <li>
+                <a class="menu-link" href="./login.html">
+                    Log in
+                </a>
+            </li>
+            <li>
+                <a class="menu-link" th:href="@{http://localhost:8080/register}">
+                    Register
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section id="main" > <tr th:each ="book : ${book14}">
+    <div class="wr">
+        <div class="container">
+            <div class="img-container">
+                <img th:src="${book.getImage()}" class="img-card" alt="" />
+            </div>
+            <div class="details-container">
+                <h1 class="book-name">
+                    <td th:utext="${book.getName()}">...</td>
+                </h1>
+                <br />
+                <p><span class="bold">Year : </span>  <td th:utext="${book.getYear()}">...</td></p>
+                <p>
+                    <span class="bold">Author : </span>
+                <td th:utext="${book.getNameOfAuthore()}">...</td>
+                <td th:utext="${book.getSurnameOfAuthore()}">...</td>
+                </p>
+                <p><span class="bold">Category : </span>
+                <td th:utext="${book.getCategory()}">...</td>
+                </p>
+                <p>
+                    <span class="bold">Published by : </span>
+                <td th:utext="${book.getPublication()}">...</td>
+                </p>
+                <p>
+                    <span class="bold">Status : </span>
+                <td th:utext="${book.getStatus()}">...</td>
+                </p>
+                <br />
+                <p><span class="bold">Description:</span></p>
+                <p>
+                <td th:utext="${book.getInfo()}">...</td>
+                </p>
+            </div>
+        </div>
+    </div>
+    </tr>
+</section>
+
+<footer>
+    <div class="wr">
+        <div class="social-icons-container">
+            <ul class="social-icons">
+                <li>
+                    <a class="facebook" th:href="@{https://www.facebook.com/people/Оля-Олейнік/100017175578403}"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a class="twitter" th:href="@{https://twitter.com/natya_mat}"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a class="github" th:href="@{https://github.com/NastyaMatviychuk}"><i class="fa fa-github"></i></a>
+                </li>
+                <li>
+                    <a class="linkedin" th:href="@{https://tc.lviv.ua/відділення-комп-ютерних-технологій.html}"><i class="fa fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <p class="copyright-text">
+                Copyright &copy; 2019 All Rights Reserved by
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

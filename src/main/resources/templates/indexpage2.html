@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.css"
+    />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styleforpagewithallbook.css}"/>
+    <link rel="stylesheet"  th:href="@{/css/shareforpage.css}"/>
+    <link rel="shortcut icon" th:href="@{/css/logoforlb.png}" type="image/png" />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Books</title>
+</head>
+<body>
+<nav>
+    <div class="wr" >
+        <div class="logo"></div>
+        <ul class="menu">
+            <li>
+                <a class="menu-link" th:href="@{http://localhost:8080/}">
+                    Books
+                </a>
+            </li>
+            <li>
+                <a class="menu-link" th:href="@{http://localhost:8080/news}">
+                    News
+                </a>
+            </li>
+            <li>
+                <a class="menu-link" th:href="@{http://localhost:8080/event}">
+                    Events
+                </a>
+            </li>
+            <li>
+                <a class="menu-link" href="#we">
+                    Log in
+                </a>
+            </li>
+            <li>
+                <a class="menu-link" th:href="@{http://localhost:8080/register}">
+                    Register
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section id="hero">
+    <div class="hero-cover">
+        <div class="wr">
+            <h1>Books</h1>
+        </div>
+    </div>
+</section>
+
+<section id="main" >
+    <div class="wr">
+        <h1>Best sellers</h1>
+        <div class="grid">
+            <tr th:each ="book : ${book9}">
+                <a class="book-page" th:href="@{http://localhost:8080/book9}">
+                <div class="book-card">
+                    <img th:src="${book.getImage()}" class="book-img" />
+                    <div class="description">
+                        <h3 class="book-card-bookname">
+                            <td th:utext="${book.getName()}">...</td>
+                        </h3>
+                        <p class="book-card-author">
+                        <td th:utext="${book.getNameOfAuthore()}">...</td>
+                        <td th:utext="${book.getSurnameOfAuthore()}">...</td>
+                        </p>
+                        <p class="book-card-year"><td th:utext="${book.getYear()}">...</td></p>
+                    </div>
+                </div></a>
+            </tr>
+
+            <tr th:each ="book : ${book10}">
+                <a class="book-page" th:href="@{http://localhost:8080/book10}">
+                <div class="book-card">
+                    <img th:src="${book.getImage()}" class="book-img" />
+                    <div class="description">
+                        <h3 class="book-card-bookname">
+                            <td th:utext="${book.getName()}">...</td>
+                        </h3>
+                        <p class="book-card-author">
+                        <td th:utext="${book.getNameOfAuthore()}">...</td>
+                        <td th:utext="${book.getSurnameOfAuthore()}">...</td>
+                        </p>
+                        <p class="book-card-year"><td th:utext="${book.getYear()}">...</td></p>
+                    </div>
+                </div></a>
+            </tr>
+
+            <tr th:each ="book : ${book11}">
+                <a class="book-page" th:href="@{http://localhost:8080/book11}">
+                <div class="book-card">
+                    <img th:src="${book.getImage()}" class="book-img" />
+                    <div class="description">
+                        <h3 class="book-card-bookname">
+                            <td th:utext="${book.getName()}">...</td>
+                        </h3>
+                        <p class="book-card-author">
+                        <td th:utext="${book.getNameOfAuthore()}">...</td>
+                        <td th:utext="${book.getSurnameOfAuthore()}">...</td>
+                        </p>
+                        <p class="book-card-year">
+                        <td th:utext="${book.getYear()}">...</td>
+                        </p>
+                    </div>
+                </div></a>
+            </tr>
+            <tr th:each ="book : ${book12}">
+                <a class="book-page" th:href="@{http://localhost:8080/book12}">
+                <div class="book-card">
+                    <img th:src="${book.getImage()}" class="book-img" />
+                    <div class="description">
+                        <h3 class="book-card-bookname">
+                            <td th:utext="${book.getName()}">...</td>
+                        </h3>
+                        <p class="book-card-author">
+                        <td th:utext="${book.getNameOfAuthore()}">...</td>
+                        <td th:utext="${book.getSurnameOfAuthore()}">...</td>
+                        </p>
+                        <p class="book-card-year">
+                        <td th:utext="${book.getYear()}">...</td>
+                        </p>
+                    </div>
+                </div></a>
+            </tr>
+
+
+
+            <tr th:each ="book : ${book13}">
+                <a class="book-page" th:href="@{http://localhost:8080/book13}">
+                <div class="book-card">
+                    <img th:src="${book.getImage()}" class="book-img" />
+                    <div class="description">
+                        <h3 class="book-card-bookname">
+                            <td th:utext="${book.getName()}">...</td>
+                        </h3>
+                        <p class="book-card-author">
+                        <td th:utext="${book.getNameOfAuthore()}">...</td>
+                        <td th:utext="${book.getSurnameOfAuthore()}">...</td>
+                        </p>
+                        <p class="book-card-year">
+                        <td th:utext="${book.getYear()}">...</td>
+                        </p>
+                    </div>
+                </div></a>
+            </tr>
+
+
+            <tr th:each ="book : ${book14}">
+                <a class="book-page" th:href="@{http://localhost:8080/book14}">
+                <div class="book-card">
+                    <img th:src="${book.getImage()}" class="book-img" />
+                    <div class="description">
+                        <h3 class="book-card-bookname">
+                            <td th:utext="${book.getName()}">...</td>
+                        </h3>
+                        <p class="book-card-author">
+                        <td th:utext="${book.getNameOfAuthore()}">...</td>
+                        <td th:utext="${book.getSurnameOfAuthore()}">...</td>
+                        </p>
+                        <p class="book-card-year"><td th:utext="${book.getYear()}">...</td></p>
+                    </div>
+                </div></a>
+            </tr>
+            <tr th:each ="book : ${book15}">
+                <a class="book-page" th:href="@{http://localhost:8080/book15}">
+                <div class="book-card">
+                    <img th:src="${book.getImage()}" class="book-img" />
+                    <div class="description">
+                        <h3 class="book-card-bookname">
+                            <td th:utext="${book.getName()}">...</td>
+                        </h3>
+                        <p class="book-card-author">
+                        <td th:utext="${book.getNameOfAuthore()}">...</td>
+                        <td th:utext="${book.getSurnameOfAuthore()}">...</td>
+                        </p>
+                        <p class="book-card-year">
+                        <td th:utext="${book.getYear()}">...</td>
+                        </p>
+                    </div>
+                </div></a>
+            </tr>
+            <tr th:each ="book : ${book16}">
+                <a class="book-page" th:href="@{http://localhost:8080/book16}">
+                <div class="book-card">
+                    <img th:src="${book.getImage()}" class="book-img" />
+                    <div class="description">
+                        <h3 class="book-card-bookname">
+                            <td th:utext="${book.getName()}">...</td>
+                        </h3>
+                        <p class="book-card-author">
+                        <td th:utext="${book.getNameOfAuthore()}">...</td>
+                        <td th:utext="${book.getSurnameOfAuthore()}">...</td>
+                        </p>
+                        <p class="book-card-year">
+                        <td th:utext="${book.getYear()}">...</td>
+                        </p>
+                    </div>
+                </div></a>
+            </tr>
+
+
+        </div>
+
+
+    </div>
+</section>
+
+<footer>
+    <div class="wr">
+        <div class="social-icons-container">
+            <ul class="social-icons">
+                <li>
+                    <a class="facebook" th:href="@{https://www.facebook.com/people/Оля-Олейнік/100017175578403}"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a class="twitter" th:href="@{https://twitter.com/natya_mat}"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a class="github" th:href="@{https://github.com/NastyaMatviychuk}"><i class="fa fa-github"></i></a>
+                </li>
+                <li>
+                    <a class="linkedin" th:href="@{https://tc.lviv.ua/відділення-комп-ютерних-технологій.html}"><i class="fa fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <p class="copyright-text">
+                Copyright &copy; 2019 All Rights Reserved by
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
